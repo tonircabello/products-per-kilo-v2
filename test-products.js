@@ -8,9 +8,12 @@ let priceCurrency = document.querySelector('meta[itemprop="priceCurrency"]');
 let priceCurrencySymbol = getCurrencySymbol();
 let addToCartButton = undefined;
 let modifiedProductsCart = [];
+let newPrice = ""
+let productWithKilograms=[]
 
 addToCartButton.addEventListener("click", (product) => {
   readName();
+  
 });
 
 function getCurrencySymbol() {
@@ -26,6 +29,18 @@ function getCurrencySymbol() {
 
 function readName() {
   if (product.contains("Kg.")) {
-    modifiedProductsCart.push(product);
+    productWithKilograms.push(product);
+    kilogramsPrompt()
   }
 }
+function setNewPrice() {
+  newPrice = itemPriceNumber * desiredKilograms
+}
+function kilogramsPrompt(){
+  if (readName() = true){
+    desiredKilograms = prompt("Introduzca los kilos deseados")
+  } }
+  
+  setNewPrice();{
+}
+
